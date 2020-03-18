@@ -5,9 +5,9 @@
 <%@ page import="pizzapackage.Pizza"%>
 <%@ page import="pizzapackage.PizzaDAO"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Alex PIZZA</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -58,19 +58,19 @@
         <div class="thumbnail" >
           <img src="images/<%=unePizza.getNroPizza()%>.jpg" class="zoom" alt="Lights" style="width:100%; height:70%">
           <div class="caption" style="text-align: center;">
-            <p> <b>Le titre : <%=unePizza.getNomPizza() %> </b> </p>
+            <p> <a href="OnePizza.jsp?id=<%=unePizza.getNroPizza()%>"> <b>Le titre : <%=unePizza.getNomPizza() %></b> </a></p>
             <p> Tarif : <%=unePizza.getPrixPizza() %> euros </p>
-            <p style="text-align: left;"> blablabla la description </p>
-          </div>
-          <input class="button" type="button" value="Modifier" style="position: relative;">
-        </div>
-        <p style="border-bottom:3px solid black; position: relative; top: -20px;"></p>
-      </div>
+    <p style="text-align: left;"> blablabla la description </p>
+    </div>
+    <input class="button" type="button" value="Modifier" style="position: relative;">
+    </div>
+    <p style="border-bottom:3px solid black; position: relative; top: -20px;"></p>
+    </div>
 
-  <%}
-} catch (Exception e) {
-  e.printStackTrace();
-}
+    <%}
+      } catch (Exception e) {
+      e.printStackTrace();
+      }
 %>
 
 

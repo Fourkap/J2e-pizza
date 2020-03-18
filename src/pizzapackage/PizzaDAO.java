@@ -21,7 +21,7 @@ public class PizzaDAO {
 
         Statement statement = conn.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
-
+        listPizza.clear();
         while (resultSet.next()) {
             int id = resultSet.getInt("id");
             String DesignPizz = resultSet.getString("DesignPizz");
@@ -51,7 +51,7 @@ public class PizzaDAO {
 
         ResultSet res = stmt.executeQuery(query);
         res.next();
-        int id = res.getInt("id");
+        Integer id = res.getInt("id");
         String DesignPizz = res.getString("DesignPizz");
         String price = res.getString("TarifPizz");
 
